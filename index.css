@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Anuphan:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", "Anuphan", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand: #A3E635;
+  --color-danger: #F97316;
+
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-[#0A0A0B] text-white/90 font-sans antialiased;
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4 {
+    @apply text-white font-bold tracking-tight;
+    line-height: 1.2;
+  }
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+.neo-blur {
+  @apply bg-black/40 backdrop-blur-2xl border border-white/5;
+}
+
+.brand-glow {
+  box-shadow: 0 0 20px rgba(163, 230, 53, 0.2);
+}
+
+.danger-glow {
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.2);
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(0.98); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s infinite ease-in-out;
+}
