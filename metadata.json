@@ -1,0 +1,10 @@
+{
+  "name": "Remix: Remix: Remix: DeepVoice Shield",
+  "description": "ระบบตรวจสอบเสียงโทรศัพท์ว่าเป็นมิจฉาชีพหรือคนจริง (AI Detection for Phone Scams)",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
